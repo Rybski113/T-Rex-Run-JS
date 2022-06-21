@@ -90,16 +90,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
          setInterval(score, 400)
+         
 
          function score() {
+            if(isGameOver = false) {
             resultDisplay.innerHTML = result
-            result ++
+            result ++ 
+            } else {
+                clearInterval(score)
+            }
+           
          }
 
+         
     
 
       generateObstacles()
       score()
+      
+      
     
       
 })
