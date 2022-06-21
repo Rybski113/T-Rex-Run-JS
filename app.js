@@ -89,24 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isGameOver) setTimeout(generateObstacles, randomTime)
     }
 
-         setInterval(score, 400)
          
-
-         function score() {
-            if(isGameOver = true) {
-            resultDisplay.innerHTML = result
-            result ++ 
-            } else {
-                clearInterval(score)
-            }
-           
-         }
 
          
     
 
       generateObstacles()
-      score()
+      
       
       
     
