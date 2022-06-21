@@ -2,9 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const dino = document.querySelector('.dino')
     const grid = document.querySelector('.grid')
     const alert = document.getElementById('alert')
+    const resultDisplay = document.getElementById('result')
+    
     let isJumping = false
     let gravity = 0.9
     let isGameOver = false
+    let result = 10
 
     function control(e) {
         if(e.keyCode === 32) {
@@ -87,5 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       generateObstacles()
 
+      function score() {
+          setInterval(function() {
+            resultDisplay.innerHTML = result ++
+          }, 500)  
+      }
 
+      score()
 })
+
