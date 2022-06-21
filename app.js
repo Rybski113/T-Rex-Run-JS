@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const dino = document.querySelector('.dino')
     const grid = document.querySelector('.grid')
     const alert = document.getElementById('alert')
-    const resultDisplay = document.getElementById('result')
+    let resultDisplay = document.getElementById('result')
     
     let isJumping = false
     let gravity = 0.9
     let isGameOver = false
-    let result = 10
+    let result = 0
 
     function control(e) {
         if(e.keyCode === 32) {
@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert.innerHTML = "Game Over"
             isGameOver = true
             // remove all children
-             while (grid.firstChild) {
+               
+                while (grid.firstChild) {
                 grid.removeChild(grid.lastChild)
              }
 
@@ -88,14 +89,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isGameOver) setTimeout(generateObstacles, randomTime)
     }
 
+         setInterval(score, 400)
+
+         function score() {
+            resultDisplay.innerHTML = result
+            result ++
+         }
+
+    
+
       generateObstacles()
-
-      function score() {
-          setInterval(function() {
-            resultDisplay.innerHTML = result ++
-          }, 500)  
-      }
-
       score()
+    
+      
 })
 
