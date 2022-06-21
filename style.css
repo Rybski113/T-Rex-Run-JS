@@ -4,6 +4,7 @@
     height: 60px;
     background-color: red;
     bottom: 0px;
+    background: url(images/t-rex.png);
 }
 
 .obstacle {
@@ -12,6 +13,7 @@
     height: 60px;
     background-color: orange;
     bottom: 0px;
+    background: url(images/cacti.png);
 }
 
 #desert {
