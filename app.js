@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
          
 
          function score() {
-            if(isGameOver = false) {
+            if(isGameOver = true) {
             resultDisplay.innerHTML = result
             result ++ 
             } else {
